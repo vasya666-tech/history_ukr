@@ -1,0 +1,97 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#line {
+    background-image: url(https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/French_bayonet_charge.jpg/500px-French_bayonet_charge.jpg?utm_source=uk.wikipedia.org&utm_campaign=parser&utm_content=thumbnail);
+    background-position: center -60px;
+    height: 90px;
+    text-align: center;
+    color: black;
+}
+
+body {
+    background: 
+        radial-gradient(circle at 50% 30%, rgba(139, 0, 0, 0.25), transparent 70%),
+        linear-gradient(135deg, #0d0d0d 0%, #1a0f0f 50%, #08080a 100%);
+    background-attachment: fixed;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: rgb(35, 211, 255);
+    font-size: 20px;
+}
+
+#central-urls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#input {
+    width: 300px;
+    height: 25px;
+    padding: 0;
+}
+
+.img {
+    margin-top: 40px;
+    margin-left: 10px;
+    border: 4px solid black;
+}
+
+.time {
+    width: 700px;
+    height: 350px;
+}
+
+.figure {
+    width: 600px;
+    height: 590px;
+}
+
+.div {
+    margin-left: 10px;
+    margin-top: 40px;
+    border: 4px solid black;
+    width: 600px;
+}
+
+.topic {
+    margin: 0;
+    background: rgb(255, 255, 255);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.text {
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;
+    background: rgb(240, 240, 240);
+    border: 3px solid black;
+    min-height: 532px;
+}
+
+#next {
+    position: absolute;
+    left: 10px;
+}
+
+#last {
+    position: absolute;
+    left: 20px;
+}
+
+#relative {
+    position: relative;
+    padding-bottom: 60px;
+}
