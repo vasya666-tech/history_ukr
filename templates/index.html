@@ -105,18 +105,72 @@
         </div>
         <img class="img figure" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Dmytro_Doncow.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled" alt="картинка">
     </div>
+    {% elif page == 'third' %}
+    <div style="display: flex;">
+        <div class="div">
+            <h2 class="topic">Галицька Битва 1914</h2>
+            <p class="text">
+                Одна з найбільших битв Першої світової війни, стратегічна наступальна операція, проведена 
+                5 (18) серпня — 8 (21) вересня 1914 у ході Першої світової війни військами російського 
+                Південно-Західного фронту (командувач фронту — генерал Микола Іванов). Метою Галицької битви був 
+                розгром австро-угорських військ і оволодіння Галичиною. На фронті від Вісли до Румунії 
+                (понад 400 км) російським військам 3-ї, 4-ї, 5-ї, 8-ї, 9-ї армії в складі Південно-Західного фронту 
+                (70 дивізій) протистояли 2, 3 і 4-та австро-угорські армії (56 дивізій, ерцгерцог Фрідріх, фельдмаршал
+                Гетцендорф), а також німецька група генерала Р. Войрша.
+            </p>
+        </div>
+        <img class="img time" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/EasternFront1914a.jpg/960px-EasternFront1914a.jpg?utm_source=uk.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="картинка">
+    </div>
+    <div style="display: flex;">
+        <div class="div">
+            <h2 class="topic">Горлицький прорив 1915</h2>
+            <p class="text">
+                Наступальна операція Центральних держав (німецьких і австро-угорських військ) під час Першої світової війни, 
+                проведена з 2 травня по 23 червня 1915 року. Ця наступальна операція була частиною стратегічного плану 
+                німецького командування на 1915 рік з розгрому Російської імператорської армії (РІА), зокрема Південно-Західного 
+                фронту.
+            </p>
+        </div>
+        <img class="img time" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/%D0%93%D0%BE%D1%80%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D0%BE%D1%80%D1%8B%D0%B2.jpg/960px-%D0%93%D0%BE%D1%80%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D0%BE%D1%80%D1%8B%D0%B2.jpg?utm_source=uk.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="картинка">
+    </div>
+    <div style="display: flex;">
+        <div class="div">
+            <h2 class="topic">Брусиловський прорив 1916</h2>
+            <p class="text">
+                Наступальна операція Південно-Західного фронту російської армії проти австро-угорських і німецьких 
+                військ під час Першої світової війни. Проведена чотирма російськими арміями під командуванням генерала від 
+                кавалерії Олексія Брусилова від 22 травня (4 червня за новим стилем) до 7 вересня (20 вересня) 1916 року 
+                на фронті від Луцька до Чернівців.
+            </p>
+        </div>
+        <img class="img time" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/EasternFront1916b.jpg?utm_source=uk.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled" alt="картинка">
+    </div>
+    <div style="display: flex;">
+        <div class="div">
+            <h2 class="topic">Провал російської наступальної кампанії 1917</h2>
+            <p class="text">
+                Остання масштабна та фінальна наступальна операція російської армії під час Першої світової війни на 
+                Південно-Західному фронті (в межах Галичини та Буковини), яка через тотальну деморалізацію військ, більшовицьку 
+                пропаганду та повний крах залізничної дисципліни обернулася нищівною поразкою від австро-німецьких військ, 
+                втратою значних територій і остаточною політичною кризою Тимчасового уряду, що відкрила більшовикам прямий 
+                шлях до влади.<br>
+                Події російської революції можна побачити на картинці.
+            </p>
+        </div>
+        <img class="img time" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Lavr_Kornilov_troops_lay_down_their_arms.jpg/500px-Lavr_Kornilov_troops_lay_down_their_arms.jpg?utm_source=uk.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="картинка">
+    </div>
     {% endif %}
 </body>
 
 <script>
     function search() {
         const seeker = document.getElementById('seeker')
-        let request = document.getElementById('input').value
-        if (typeof request == 'string') {
-            seeker.textContent = 'Вам потрібно до діячів. /figures'
-            seeker.style.display = 'block'
-        } else if (Number.isInteger(Number(request))) {
+        let request = document.getElementById('input').value.trim()
+        if (Number.isInteger(Number(request))) {
             seeker.textContent = 'Вам потрібно до подій. /info'
+            seeker.style.display = 'block'
+        } else {
+            seeker.textContent = 'Вам потрібно до діячів. /figures'
             seeker.style.display = 'block'
         }
     }
