@@ -4,10 +4,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def next_page():
-    return redirect(url_for('search'))
+    return redirect(url_for('search_page'))
 
 @app.route('/search')
-def sarch_page():
+def search_page():
     return render_template('index.html', page='search')
 
 @app.route('/info')
