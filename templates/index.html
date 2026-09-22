@@ -29,6 +29,8 @@
             <li><a href="/info">/info</a></li>
             <h2><< Тогочасні діячі >></h2>
             <li><a href="/figures">/figures</a></li>
+            <h2><< Воєнні битви >></h2>
+            <li><a href="/battles">/battles</a></li>
         </ul>
     </div>
     {% elif page == 'first' %}
@@ -168,6 +170,9 @@
         let request = document.getElementById('input').value.trim()
         if (Number.isInteger(Number(request))) {
             seeker.textContent = 'Вам потрібно до подій. /info'
+            seeker.style.display = 'block'
+        } else if (request=='Битва') {
+            seeker.textContent = 'Вам потрібно до воєнних битв. /battles'
             seeker.style.display = 'block'
         } else {
             seeker.textContent = 'Вам потрібно до діячів. /figures'
