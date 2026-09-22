@@ -17,3 +17,7 @@ def first_page():
 @app.route('/figures')
 def second_page():
     return render_template('index.html', page='second')
+
+@app.route('/battles')
+def third_page():
+    return render_template('index.html', page='third')
